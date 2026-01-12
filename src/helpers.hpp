@@ -5,3 +5,7 @@ void stopIntake();
 void scoreMidHigh();
 void stopScoreMidHigh();
 void scoreLow();
+void setMidhigh(bool extended);
+void setLip(bool extended);
+bool toggleMidhigh();
+bool toggleLip();

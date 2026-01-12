@@ -1,10 +1,5 @@
 #include "helpers.hpp"
-#include "main.h"
-
-extern pros::Motor intake_motor;
-extern pros::Motor mid;
-extern pros::Motor scoring_first_stage;
-extern pros::Motor scoring_second_stage;
+#include "hardware.hpp"
 
 void intake(int intakePower, int midPower, int firstStagePower)
 {
@@ -34,4 +29,30 @@ void scoreLow()
 {
     scoring_second_stage.move(0);
     intake(127, 127, -127);
+}
+
+void setMidhigh(bool extended)
+{
+    midhigh.set_value(extended);
+}
+
+void setLip(bool extended)
+{
+    lip.set_value(extended);
+}
+
+bool toggleMidhigh()
+{
+    static bool midhighExtended = false;
+    midhighExtended = !midhighExtended;
+    setMidhigh(midhighExtended);
+    return midhighExtended;
+}
+
+bool toggleLip()
+{
+    static bool lipExtended = false;
+    lipExtended = !lipExtended;
+    setLip(lipExtended);
+    return lipExtended;
 }

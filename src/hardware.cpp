@@ -28,6 +28,6 @@ lemlib::Drivetrain drivetrain(&left_motors, &right_motors, 10.5, lemlib::Omniwhe
 lemlib::OdomSensors sensors(&vertical_tracking_wheel, nullptr, nullptr, nullptr, &imu);
 
 lemlib::ControllerSettings lateral_controller(10, 0, 3, 0, 1, 100, 3, 250, 0);
-lemlib::ControllerSettings angular_controller(15, 0, 20, 0, 1, 100, 3, 250, 0);
+lemlib::ControllerSettings angular_controller(8, 0, 15, 0, 0, 0, 0, 0, 0);
 
 lemlib::Chassis chassis(drivetrain, lateral_controller, angular_controller, sensors);

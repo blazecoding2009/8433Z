@@ -1,0 +1,324 @@
+{
+    "initial": {
+        "position": [
+            230.0,
+            562
+        ],
+        "heading": 90.0
+    },
+    "nodes": [
+        {
+            "pos": [
+                230.0,
+                562
+            ],
+            "path_to_next": {},
+            "profile_info": {
+                "drive_profile": "normal"
+            }
+        },
+        {
+            "pos": [
+                230.0,
+                474
+            ],
+            "path_to_next": {},
+            "profile_info": {
+                "turn_profile": "normal",
+                "drive_profile": "precise"
+            }
+        },
+        {
+            "pos": [
+                199.0,
+                476
+            ],
+            "edge_events": [
+                {
+                    "t": 0.15842571527237045,
+                    "enabled": true,
+                    "actions": [
+                        {
+                            "kind": "preset",
+                            "name": "intake",
+                            "state": null,
+                            "value": null,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "t": 0.7004438875962055,
+                    "enabled": true,
+                    "actions": [
+                        {
+                            "kind": "preset",
+                            "name": "reshape",
+                            "state": null,
+                            "value": null,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "path_to_next": {},
+            "profile_info": {
+                "turn_profile": "normal",
+                "drive_profile": "normal"
+            }
+        },
+        {
+            "pos": [
+                200.0,
+                400
+            ],
+            "path_to_next": {},
+            "reverse": false,
+            "actions": [
+                {
+                    "type": "wait",
+                    "s": 1.5
+                }
+            ],
+            "edge_events": [
+                {
+                    "t": 0.5326958901259011,
+                    "enabled": true,
+                    "actions": [
+                        {
+                            "kind": "preset",
+                            "name": "reshape",
+                            "state": null,
+                            "value": null,
+                            "values": []
+                        },
+                        {
+                            "kind": "preset",
+                            "name": "stopwheels",
+                            "state": null,
+                            "value": null,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "t": 1.0,
+                    "enabled": true,
+                    "actions": [
+                        {
+                            "kind": "preset",
+                            "name": "scoremid",
+                            "state": null,
+                            "value": null,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "turn_mode": "turn",
+            "swing_dir": "auto",
+            "move_to_pose": false,
+            "profile_info": {
+                "turn_profile": "normal",
+                "drive_profile": "normal"
+            }
+        },
+        {
+            "pos": [
+                265.0,
+                335.0
+            ],
+            "actions": [
+                {
+                    "type": "wait",
+                    "s": 2.0
+                }
+            ],
+            "path_to_next": {},
+            "offset": 1,
+            "reverse": true,
+            "edge_events": [
+                {
+                    "t": 0.8967649245303052,
+                    "enabled": true,
+                    "actions": [
+                        {
+                            "kind": "preset",
+                            "name": "reshape",
+                            "state": null,
+                            "value": null,
+                            "values": []
+                        },
+                        {
+                            "kind": "preset",
+                            "name": "intake",
+                            "state": null,
+                            "value": null,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "profile_info": {
+                "drive_profile": "fast"
+            }
+        },
+        {
+            "pos": [
+                99.0,
+                503
+            ],
+            "path_to_next": {},
+            "reverse": true,
+            "actions": [
+                {
+                    "type": "reverse",
+                    "state": null
+                }
+            ],
+            "turn_mode": "turn",
+            "swing_dir": "auto",
+            "move_to_pose": false,
+            "profile_info": {
+                "turn_profile": "fast",
+                "drive_profile": "precise"
+            }
+        },
+        {
+            "pos": [
+                99.34017003188097,
+                535.9964930924548
+            ],
+            "path_to_next": {},
+            "reverse": false,
+            "actions": [],
+            "turn_mode": "turn",
+            "swing_dir": "auto",
+            "move_to_pose": false,
+            "profile_info": {
+                "drive_profile": "precise"
+            }
+        },
+        {
+            "pos": [
+                100.0,
+                600
+            ],
+            "actions": [
+                {
+                    "type": "wait",
+                    "s": 2.0
+                }
+            ],
+            "path_to_next": {},
+            "offset": 2,
+            "reverse": true,
+            "profile_info": {
+                "turn_profile": "precise",
+                "drive_profile": "normal"
+            }
+        },
+        {
+            "pos": [
+                99.64589557356902,
+                490.9976561600298
+            ],
+            "path_to_next": {},
+            "reverse": false,
+            "actions": [
+                {
+                    "type": "swing",
+                    "deg": 90.0,
+                    "dir": "auto",
+                    "settle": false
+                },
+                {
+                    "type": "reverse",
+                    "state": null
+                }
+            ],
+            "turn_mode": "turn",
+            "swing_dir": "auto",
+            "move_to_pose": false,
+            "edge_events": [
+                {
+                    "t": 0.3550576917091266,
+                    "enabled": true,
+                    "actions": [
+                        {
+                            "kind": "preset",
+                            "name": "reshape",
+                            "state": null,
+                            "value": null,
+                            "values": []
+                        },
+                        {
+                            "kind": "preset",
+                            "name": "stopwheels",
+                            "state": null,
+                            "value": null,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "profile_info": {
+                "swing_profile": "precise",
+                "turn_profile": "fast",
+                "drive_profile": "normal"
+            }
+        },
+        {
+            "pos": [
+                100.0,
+                400
+            ],
+            "actions": [
+                {
+                    "type": "preset",
+                    "name": "scorehigh",
+                    "state": null,
+                    "value": null,
+                    "values": []
+                },
+                {
+                    "type": "wait",
+                    "s": 3.0
+                },
+                {
+                    "type": "reverse",
+                    "state": null
+                }
+            ],
+            "offset": 1,
+            "reverse": false,
+            "turn_mode": "turn",
+            "swing_dir": "auto",
+            "move_to_pose": false,
+            "path_to_next": {},
+            "profile_info": {
+                "turn_profile": "precise",
+                "drive_profile": "precise"
+            }
+        },
+        {
+            "pos": [
+                100.0,
+                438
+            ],
+            "reverse": false,
+            "actions": [
+                {
+                    "type": "preset",
+                    "name": "scorehigh",
+                    "state": null,
+                    "value": null,
+                    "values": []
+                }
+            ],
+            "turn_mode": "turn",
+            "swing_dir": "auto",
+            "move_to_pose": false
+        }
+    ]
+}
