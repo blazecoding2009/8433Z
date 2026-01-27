@@ -1,11 +1,16 @@
 #include "helpers.hpp"
 #include "hardware.hpp"
 
+namespace {
+constexpr int kFullPower = 127;
+bool s_midhighExtended = false;
+}
+
 void intake(int intakePower, int midPower, int firstStagePower)
 {
     intake_motor.move(intakePower);
     mid.move(midPower);
-    scoring_first_stage.move(firstStagePower);
+    scoring_motor.move(firstStagePower);
 }
 
 void stopIntake()
@@ -13,26 +18,33 @@ void stopIntake()
     intake(0, 0, 0);
 }
 
-void scoreMidHigh()
+void scoreHigh()
 {
-    scoring_second_stage.move(127);
-    intake(-127, -127, 127);
+    intake(kFullPower, kFullPower, kFullPower);
+    scoring_motor.move(kFullPower);
+}
+
+void scoreMid()
+{
+    intake(kFullPower, kFullPower, kFullPower);
+    scoring_motor.move(-kFullPower);
 }
 
 void stopScoreMidHigh()
 {
-    scoring_second_stage.move(0);
+    scoring_motor.move(0);
     stopIntake();
 }
 
 void scoreLow()
 {
-    scoring_second_stage.move(0);
-    intake(127, 127, -127);
+    intake(-kFullPower, -kFullPower, -kFullPower);
+    scoring_motor.move(-kFullPower);
 }
 
 void setMidhigh(bool extended)
 {
+    s_midhighExtended = extended;
     midhigh.set_value(extended);
 }
 
@@ -43,10 +55,9 @@ void setLip(bool extended)
 
 bool toggleMidhigh()
 {
-    static bool midhighExtended = false;
-    midhighExtended = !midhighExtended;
-    setMidhigh(midhighExtended);
-    return midhighExtended;
+    s_midhighExtended = !s_midhighExtended;
+    setMidhigh(s_midhighExtended);
+    return s_midhighExtended;
 }
 
 bool toggleLip()

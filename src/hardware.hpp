@@ -7,8 +7,7 @@ extern pros::MotorGroup right_motors;
 extern pros::MotorGroup left_motors;
 extern pros::Motor intake_motor;
 extern pros::Motor mid;
-extern pros::Motor scoring_first_stage;
-extern pros::Motor scoring_second_stage;
+extern pros::Motor scoring_motor;
 
 extern pros::Imu imu;
 extern pros::Rotation vertical_encoder;

@@ -1,0 +1,63 @@
+#include "../hardware.hpp"
+#include "../helpers.hpp"
+#include "auton/autons.hpp"
+
+#include "lemlib/api.hpp"
+
+void right_side_auton() {
+/* CODEGEN EXPORT: LemLib */
+
+chassis.setPose(-48.000000, -18.000000, 180.000000);
+
+chassis.moveToPoint(-48.0, -24.0, 868);
+pros::delay(50);
+chassis.turnToHeading(90.0, 1111);
+chassis.moveToPoint(-24.0, -24.0, 1647);
+chassis.waitUntil(3.802217);
+intake(-127, -127, 127);
+chassis.waitUntil(16.810653);
+setLip(true);
+chassis.waitUntilDone();
+pros::delay(1500);
+chassis.turnToHeading(45.0, 844);
+chassis.moveToPoint(-11.935534, -11.935534, 1399);
+chassis.waitUntil(4.921463);
+setLip(false);
+chassis.waitUntil(9.013573);
+stopScoreMidHigh();
+chassis.waitUntil(17.061732);
+scoreLow();
+chassis.waitUntilDone();
+pros::delay(2000);
+chassis.moveToPoint(-48.0, -48.0, 2051, {.forwards = false});
+chassis.waitUntil(45.737573);
+setLip(true);
+intake(-127, -127, 127);
+chassis.waitUntilDone();
+pros::delay(50);
+chassis.turnToHeading(268.949863, 1293);
+chassis.moveToPoint(-56.639158, -48.158359, 988);
+pros::delay(50);
+chassis.turnToHeading(270.590657, 778);
+chassis.moveToPoint(-60.000638, -48.123705, 808);
+pros::delay(2000);
+chassis.turnToHeading(269.843342, 778);
+chassis.moveToPoint(-45.839437, -48.084985, 1134, {.forwards = false});
+pros::delay(50);
+chassis.swingToHeading(270.001416, DriveSide::RIGHT, 743, {.minSpeed = 40, .earlyExitRange = 7.0});
+chassis.turnToHeading(89.776888, 1470);
+chassis.moveToPoint(-28.999962, -48.019457, 1217);
+chassis.waitUntil(2.396262);
+setLip(false);
+chassis.waitUntil(5.972663);
+stopScoreMidHigh();
+chassis.waitUntilDone();
+setMidhigh(false);
+scoreMid();
+pros::delay(3000);
+chassis.moveToPoint(-33.12, -48.0, 810, {.forwards = false});
+
+// Estimated total time: 17.88 s
+
+
+}

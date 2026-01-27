@@ -1,11 +1,10 @@
 #include "hardware.hpp"
 
-pros::MotorGroup right_motors({19, 20}, pros::MotorGearset::blue);
-pros::MotorGroup left_motors({-11, -12}, pros::MotorGearset::blue);
+pros::MotorGroup right_motors({11,12,13}, pros::MotorGearset::blue);
+pros::MotorGroup left_motors({-14,-15,-16}, pros::MotorGearset::blue);
 pros::Motor intake_motor(1, pros::MotorGearset::blue);
 pros::Motor mid(2, pros::MotorGearset::blue);
-pros::Motor scoring_first_stage(10);
-pros::Motor scoring_second_stage(3);
+pros::Motor scoring_motor(3, pros::MotorGearset::blue);
 
 pros::Imu imu(13);
 

@@ -1,0 +1,106 @@
+{
+    "initial": {
+        "position": [
+            300,
+            300
+        ],
+        "heading": 177.28979689982543
+    },
+    "nodes": [
+        {
+            "pos": [
+                380,
+                565
+            ],
+            "reverse": false,
+            "path_to_next": {},
+            "profile_info": {
+                "turn_profile": "precise",
+                "drive_profile": "fast"
+            }
+        },
+        {
+            "pos": [
+                199,
+                560
+            ],
+            "path_to_next": {},
+            "profile_info": {
+                "turn_profile": "normal",
+                "drive_profile": "normal"
+            }
+        },
+        {
+            "pos": [
+                200,
+                500
+            ],
+            "path_to_next": {},
+            "profile_info": {
+                "turn_profile": "normal",
+                "drive_profile": "normal"
+            }
+        },
+        {
+            "pos": [
+                100,
+                500
+            ],
+            "path_to_next": {},
+            "profile_info": {
+                "drive_profile": "normal"
+            }
+        },
+        {
+            "pos": [
+                50,
+                500
+            ],
+            "path_to_next": {},
+            "profile_info": {
+                "turn_profile": "normal",
+                "drive_profile": "fast"
+            }
+        },
+        {
+            "pos": [
+                50,
+                100
+            ],
+            "path_to_next": {},
+            "profile_info": {
+                "turn_profile": "normal",
+                "drive_profile": "normal"
+            }
+        },
+        {
+            "pos": [
+                175,
+                100
+            ],
+            "path_to_next": {},
+            "profile_info": {
+                "turn_profile": "normal",
+                "drive_profile": "normal"
+            }
+        },
+        {
+            "pos": [
+                175,
+                50
+            ],
+            "path_to_next": {},
+            "profile_info": {
+                "turn_profile": "normal",
+                "drive_profile": "fast"
+            }
+        },
+        {
+            "pos": [
+                400,
+                50
+            ],
+            "reverse": true
+        }
+    ]
+}

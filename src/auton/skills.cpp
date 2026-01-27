@@ -1,0 +1,39 @@
+#include "../hardware.hpp"
+#include "../helpers.hpp"
+#include "auton/autons.hpp"
+
+#include "lemlib/api.hpp"
+
+void skills_auton() {
+	/* CODEGEN EXPORT: LemLib */
+
+chassis.setPose(-63.600000, -19.200000, 2.710203);
+
+setMidhigh(false);
+scoreMid();
+chassis.turnToHeading(1.582354, 778);
+chassis.moveToPoint(-62.4, 24.24, 1864);
+pros::delay(50);
+chassis.turnToHeading(90.954841, 1108);
+chassis.moveToPoint(-48.0, 24.0, 1142);
+pros::delay(50);
+chassis.turnToHeading(0.0, 1117);
+chassis.moveToPoint(-48.0, 48.0, 1414);
+pros::delay(50);
+chassis.moveToPoint(-48.0, 60.0, 1062);
+pros::delay(50);
+chassis.turnToHeading(90.0, 1111);
+chassis.moveToPoint(48.0, 60.0, 3112);
+pros::delay(50);
+chassis.turnToHeading(180.0, 1111);
+chassis.moveToPoint(48.0, 30.0, 1571);
+pros::delay(50);
+chassis.turnToHeading(90.90938, 1107);
+chassis.moveToPoint(63.12, 29.76, 1164);
+pros::delay(50);
+chassis.turnToHeading(180.0, 1107);
+chassis.moveToPoint(63.12, -24.48, 2127);
+
+// Estimated total time: 12.69 s
+
+}

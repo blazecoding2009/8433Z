@@ -2,7 +2,8 @@
 
 void intake(int intakePower, int midPower, int firstStagePower);
 void stopIntake();
-void scoreMidHigh();
+void scoreHigh();
+void scoreMid();
 void stopScoreMidHigh();
 void scoreLow();
 void setMidhigh(bool extended);

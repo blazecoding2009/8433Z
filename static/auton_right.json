@@ -4,34 +4,23 @@
             300,
             300
         ],
-        "heading": 90.0
+        "heading": 0.0
     },
     "nodes": [
         {
             "pos": [
-                370,
-                562
+                375,
+                500
             ],
             "path_to_next": {},
             "profile_info": {
-                "drive_profile": "normal"
-            }
-        },
-        {
-            "pos": [
-                370,
-                474
-            ],
-            "path_to_next": {},
-            "profile_info": {
-                "turn_profile": "normal",
                 "drive_profile": "precise"
             }
         },
         {
             "pos": [
-                401,
-                476
+                400,
+                500
             ],
             "edge_events": [
                 {
@@ -62,9 +51,16 @@
                 }
             ],
             "path_to_next": {},
+            "reverse": false,
+            "custom_lateral_cmd": 90.0,
+            "actions": [],
+            "turn_mode": "turn",
+            "swing_dir": "auto",
+            "move_to_pose": false,
+            "profile_override": "custom",
             "profile_info": {
                 "turn_profile": "normal",
-                "drive_profile": "normal"
+                "drive_profile": "custom"
             }
         },
         {
@@ -82,7 +78,7 @@
             ],
             "edge_events": [
                 {
-                    "t": 0.5326958901259011,
+                    "t": 0.28845039414643464,
                     "enabled": true,
                     "actions": [
                         {
@@ -91,7 +87,13 @@
                             "state": null,
                             "value": null,
                             "values": []
-                        },
+                        }
+                    ]
+                },
+                {
+                    "t": 0.5282918180809185,
+                    "enabled": true,
+                    "actions": [
                         {
                             "kind": "preset",
                             "name": "stopwheels",
@@ -118,9 +120,11 @@
             "turn_mode": "turn",
             "swing_dir": "auto",
             "move_to_pose": false,
+            "custom_lateral_cmd": 90.0,
+            "profile_override": "custom",
             "profile_info": {
                 "turn_profile": "normal",
-                "drive_profile": "normal"
+                "drive_profile": "custom"
             }
         },
         {
@@ -165,8 +169,8 @@
         },
         {
             "pos": [
-                501,
-                503
+                500,
+                500
             ],
             "path_to_next": {},
             "reverse": true,
@@ -196,6 +200,7 @@
             "swing_dir": "auto",
             "move_to_pose": false,
             "profile_info": {
+                "turn_profile": "precise",
                 "drive_profile": "precise"
             }
         },
@@ -242,7 +247,7 @@
             "move_to_pose": false,
             "edge_events": [
                 {
-                    "t": 0.3550576917091266,
+                    "t": 0.14245087141850912,
                     "enabled": true,
                     "actions": [
                         {
@@ -251,7 +256,13 @@
                             "state": null,
                             "value": null,
                             "values": []
-                        },
+                        }
+                    ]
+                },
+                {
+                    "t": 0.3550576917091266,
+                    "enabled": true,
+                    "actions": [
                         {
                             "kind": "preset",
                             "name": "stopwheels",
@@ -297,7 +308,6 @@
             "move_to_pose": false,
             "path_to_next": {},
             "profile_info": {
-                "turn_profile": "precise",
                 "drive_profile": "precise"
             }
         },
@@ -306,7 +316,7 @@
                 500,
                 438
             ],
-            "reverse": false,
+            "reverse": true,
             "actions": [
                 {
                     "type": "preset",
