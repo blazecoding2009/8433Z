@@ -218,14 +218,14 @@ void opcontrol() {
 			setMatchLoader(matchLoaderExtended);
 		}
 
-		if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_B)) {
-			chassis.setPose(0, 0, 180);
-			chassis.moveToPoint(0, -48, 10000);		
-			}
+		// if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_B)) {
+		// 	chassis.setPose(0, 0, 180);
+		// 	chassis.moveToPoint(0, -48, 10000);		
+		// 	}
 
-		if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_Y)) {
-			rightside();
-		}
+		// if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_Y)) {
+		// 	rightside();
+		// }
 
 
 
