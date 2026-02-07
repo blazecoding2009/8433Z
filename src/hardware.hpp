@@ -8,6 +8,7 @@ extern pros::MotorGroup left_motors;
 extern pros::Motor intake_motor;
 extern pros::Motor mid;
 extern pros::Motor scoring_motor;
+extern pros::Distance front_distance_sensor;
 
 extern pros::Imu imu;
 extern pros::Rotation vertical_encoder;
@@ -17,7 +18,7 @@ extern lemlib::TrackingWheel horizontal_tracking_wheel;
 
 extern pros::ADIDigitalOut midhigh;
 extern pros::ADIDigitalOut descore;
-extern pros::ADIDigitalOut lip;
+extern pros::ADIDigitalOut match_loader;
 
 extern const int MOTOR_TEETH;
 extern const int WHEEL_TEETH;

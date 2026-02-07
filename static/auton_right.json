@@ -12,138 +12,22 @@
                 375,
                 500
             ],
-            "path_to_next": {},
-            "profile_info": {
-                "drive_profile": "precise"
-            }
+            "path_to_next": {}
         },
         {
             "pos": [
-                400,
+                500,
                 500
-            ],
-            "edge_events": [
-                {
-                    "t": 0.15842571527237045,
-                    "enabled": true,
-                    "actions": [
-                        {
-                            "kind": "preset",
-                            "name": "intake",
-                            "state": null,
-                            "value": null,
-                            "values": []
-                        }
-                    ]
-                },
-                {
-                    "t": 0.7004438875962055,
-                    "enabled": true,
-                    "actions": [
-                        {
-                            "kind": "preset",
-                            "name": "reshape",
-                            "state": null,
-                            "value": null,
-                            "values": []
-                        }
-                    ]
-                }
             ],
             "path_to_next": {},
             "reverse": false,
-            "custom_lateral_cmd": 90.0,
             "actions": [],
             "turn_mode": "turn",
             "swing_dir": "auto",
             "move_to_pose": false,
-            "profile_override": "custom",
-            "profile_info": {
-                "turn_profile": "normal",
-                "drive_profile": "custom"
-            }
-        },
-        {
-            "pos": [
-                400,
-                400
-            ],
-            "path_to_next": {},
-            "reverse": false,
-            "actions": [
-                {
-                    "type": "wait",
-                    "s": 1.5
-                }
-            ],
             "edge_events": [
                 {
-                    "t": 0.28845039414643464,
-                    "enabled": true,
-                    "actions": [
-                        {
-                            "kind": "preset",
-                            "name": "reshape",
-                            "state": null,
-                            "value": null,
-                            "values": []
-                        }
-                    ]
-                },
-                {
-                    "t": 0.5282918180809185,
-                    "enabled": true,
-                    "actions": [
-                        {
-                            "kind": "preset",
-                            "name": "stopwheels",
-                            "state": null,
-                            "value": null,
-                            "values": []
-                        }
-                    ]
-                },
-                {
-                    "t": 1.0,
-                    "enabled": true,
-                    "actions": [
-                        {
-                            "kind": "preset",
-                            "name": "scorelow",
-                            "state": null,
-                            "value": null,
-                            "values": []
-                        }
-                    ]
-                }
-            ],
-            "turn_mode": "turn",
-            "swing_dir": "auto",
-            "move_to_pose": false,
-            "custom_lateral_cmd": 90.0,
-            "profile_override": "custom",
-            "profile_info": {
-                "turn_profile": "normal",
-                "drive_profile": "custom"
-            }
-        },
-        {
-            "pos": [
-                335.0,
-                335.0
-            ],
-            "actions": [
-                {
-                    "type": "wait",
-                    "s": 2.0
-                }
-            ],
-            "path_to_next": {},
-            "offset": 1,
-            "reverse": true,
-            "edge_events": [
-                {
-                    "t": 0.8967649245303052,
+                    "t": 0.38879613901063753,
                     "enabled": true,
                     "actions": [
                         {
@@ -162,47 +46,19 @@
                         }
                     ]
                 }
-            ],
-            "profile_info": {
-                "drive_profile": "fast"
-            }
+            ]
         },
         {
             "pos": [
-                500,
-                500
-            ],
-            "path_to_next": {},
-            "reverse": true,
-            "actions": [
-                {
-                    "type": "reverse",
-                    "state": null
-                }
-            ],
-            "turn_mode": "turn",
-            "swing_dir": "auto",
-            "move_to_pose": false,
-            "profile_info": {
-                "turn_profile": "fast",
-                "drive_profile": "precise"
-            }
-        },
-        {
-            "pos": [
-                500.659829968119,
-                535.9964930924548
+                501,
+                530
             ],
             "path_to_next": {},
             "reverse": false,
             "actions": [],
             "turn_mode": "turn",
             "swing_dir": "auto",
-            "move_to_pose": false,
-            "profile_info": {
-                "turn_profile": "precise",
-                "drive_profile": "precise"
-            }
+            "move_to_pose": false
         },
         {
             "pos": [
@@ -211,73 +67,20 @@
             ],
             "actions": [
                 {
+                    "type": "reverse",
+                    "state": null
+                },
+                {
                     "type": "wait",
                     "s": 2.0
                 }
             ],
-            "path_to_next": {},
             "offset": 2,
-            "reverse": true,
-            "profile_info": {
-                "turn_profile": "precise",
-                "drive_profile": "normal"
-            }
-        },
-        {
-            "pos": [
-                500.354104426431,
-                490.9976561600298
-            ],
-            "path_to_next": {},
             "reverse": false,
-            "actions": [
-                {
-                    "type": "swing",
-                    "deg": 90.0,
-                    "dir": "auto",
-                    "settle": false
-                },
-                {
-                    "type": "reverse",
-                    "state": null
-                }
-            ],
+            "path_to_next": {},
             "turn_mode": "turn",
             "swing_dir": "auto",
-            "move_to_pose": false,
-            "edge_events": [
-                {
-                    "t": 0.14245087141850912,
-                    "enabled": true,
-                    "actions": [
-                        {
-                            "kind": "preset",
-                            "name": "reshape",
-                            "state": null,
-                            "value": null,
-                            "values": []
-                        }
-                    ]
-                },
-                {
-                    "t": 0.3550576917091266,
-                    "enabled": true,
-                    "actions": [
-                        {
-                            "kind": "preset",
-                            "name": "stopwheels",
-                            "state": null,
-                            "value": null,
-                            "values": []
-                        }
-                    ]
-                }
-            ],
-            "profile_info": {
-                "swing_profile": "precise",
-                "turn_profile": "fast",
-                "drive_profile": "normal"
-            }
+            "move_to_pose": false
         },
         {
             "pos": [
@@ -306,10 +109,7 @@
             "turn_mode": "turn",
             "swing_dir": "auto",
             "move_to_pose": false,
-            "path_to_next": {},
-            "profile_info": {
-                "drive_profile": "precise"
-            }
+            "path_to_next": {}
         },
         {
             "pos": [
