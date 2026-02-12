@@ -24,16 +24,21 @@ void right_side_auton() {
 	pros::delay(3000);
 	chassis.turnToHeading(269.718678, 1000, {.maxSpeed = 100});
 	chassis.moveToPoint(-29.0, -50.0, 1793, {.forwards = false, .maxSpeed = 127});
-    chassis.waitUntilDone();
+	chassis.waitUntilDone();
 	descore.set_value(true);
 	scoreHigh();
 	pros::delay(3000);
 
-
-
 	chassis.moveToPoint(-35.0, -50.0, 750, {.forwards = false, .maxSpeed = 100});
 	descore.set_value(false);
-	chassis.moveToPoint(-28.0, -50.0, 1500, {.forwards = false, .maxSpeed = 127});
+	chassis.moveToPoint(
+	    -28.0, -50.0, 1500,
+	    {
+	        .forwards = false,
+	        .maxSpeed = 127,
+	        .minSpeed = 127,
+	    }
+	);
 
 	// Estimated total time: 9.22 s
 }

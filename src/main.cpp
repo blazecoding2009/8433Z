@@ -47,7 +47,6 @@ void runAutotuneRoutine()
 } // namespace
 
 rd::Selector selector({
-    {"Left Side", &left_side_auton, "", 0},
     {"Right Side", &right_side_auton, "", 180},
     {"Skills", &skills_auton, "", 360},
 });
@@ -84,93 +83,10 @@ void disabled() {
 
 void competition_initialize() { selector.focus(); }
 
-void autonomous() { right_side_auton(); }
-
-
-void rightside(){
-	// set position to x:0, y:0, heading:0
-    chassis.setPose(0, 0, 0);
-    // turn to face heading 90 with a very long timeout
-	scoreHigh();  // intake
-	//queue balls (intake)
-	chassis.moveToPose(12, 37, 24, 2000, {.maxSpeed = 60});
-	chassis.turnToHeading(114, 1000);
-	match_loader.set_value(true);
-	chassis.moveToPoint(36, 10, 2000);
-	chassis.turnToHeading(180,  2000);
-	descore.set_value(false);
-	chassis.moveToPose(36,-20,180,1500, {.maxSpeed = 150});
-	chassis.moveToPose(36.73, 30, 180,  1500, {.forwards = false, .minSpeed = 60}, false);
-	scoreHigh();  // intake
-	pros::delay(3000);
-	descore.set_value(true);
-	chassis.moveToPoint(36.73, 17, 1000, {.minSpeed = 60}, false);
-	chassis.turnToHeading(130, 1000);
-	chassis.moveToPoint(28, 22, 1000, {.forwards = false});
-	chassis.turnToHeading(180, 1000);
-	chassis.moveToPoint(28, 45, 3000, {.forwards=false,.maxSpeed = 60}, false);
-}
-
-void leftside(){
-	chassis.setPose(0, 0, 0);
-
-	scoreHigh();
-	chassis.moveToPose( -12, 37, -21, 2000, {.minSpeed = 50}, false);
-	pros::delay(300);
-	chassis.turnToHeading(-131, 1000); // fix
-	chassis.moveToPose(7, 44, -131, 1600,{.forwards=false}, false);
-	scoreHigh();
-	pros::delay(400);
-	scoreHigh();
-	pros::delay(200);
-	chassis.moveToPoint(-34, 8, 2000);
-	chassis.turnToHeading(180, 1000);
-	match_loader.set_value(true);
-	chassis.moveToPoint(-34, -20, 1700, {.maxSpeed = 40});
-	chassis.moveToPoint(-34, 30, 1000, {.forwards=false,.maxSpeed = 80}, false);
-	scoreHigh();
-	pros::delay(2000);
-	descore.set_value(false);
-	chassis.moveToPoint(-36, 17, 1000, {.minSpeed = 60}, false);
-	chassis.moveToPoint(-36, 40, 1000, {.forwards=false,.minSpeed = 200}, false);
-}
-
-void soloAWP(){
-	// set position to x:0, y:0, heading:0
-    chassis.setPose(-1, -1.5, -90);
-   
-	scoreHigh();
-
-	chassis.moveToPoint(-34, 5, 1000);
-	chassis.turnToHeading(180, 1000);
-	descore.set_value(true);
-	chassis.moveToPoint(-34, -20, 1300, {.maxSpeed = 50, .minSpeed = 50});
-	chassis.moveToPoint(-34, 30, 1000, {.forwards=false,.minSpeed = 80});
-	pros::delay(800);
-	scoreHigh();
-	pros::delay(1500);
-	descore.set_value(false);
-
-	chassis.moveToPoint(-34, 17, 1000, {.minSpeed = 60}, false);
-
-	chassis.turnToHeading(90, 700, {}, false);
-	scoreHigh();
-	chassis.moveToPose( -15.5, 34, -21, 2000, {.minSpeed = 70}, false);
-	pros::delay(300);
-	chassis.turnToHeading(-131, 700); 
-	chassis.moveToPose(10, 47, -131, 1000,{.forwards=false, .minSpeed = 100}, false);
-	scoreHigh();
-	pros::delay(700);
-
-	scoreHigh();
-	chassis.moveToPose(52, 34, 90, 1000, {.minSpeed = 80}, false);
-
-	chassis.moveToPoint(64, 10, 1000, {.minSpeed = 70});
-	chassis.turnToHeading(180, 1000);
-
-	chassis.moveToPoint(64, 30, 1000, {.forwards = false, .minSpeed = 80});
-	pros::delay(700);
-	scoreHigh();
+void autonomous() { 
+	//right_side_auton(); 
+	// skills_auton();
+	selector.get_auton();
 }
 
 void opcontrol() {
