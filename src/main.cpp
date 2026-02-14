@@ -46,8 +46,16 @@ void runAutotuneRoutine()
 }
 } // namespace
 
+void move_forward_auton()
+{
+	chassis.setPose(0, 0, 0);
+	chassis.moveToPoint(0, 4, 1000, {.maxSpeed = 60});
+	chassis.waitUntilDone();
+}
+
 rd::Selector selector({
     {"Right Side", &right_side_auton, "", 180},
+    {"move fwd", &move_forward_auton, "", 0},
     {"Skills", &skills_auton, "", 360},
 });
 
