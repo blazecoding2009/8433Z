@@ -9,7 +9,7 @@ pros::Distance front_distance_sensor(8);
 
 pros::Imu imu(4);
 
-pros::Rotation vertical_encoder(-17);
+pros::Rotation vertical_encoder(17);
 lemlib::TrackingWheel vertical_tracking_wheel(&vertical_encoder, lemlib::Omniwheel::NEW_2, .75);
 
 pros::Rotation horizontal_encoder(6);
@@ -27,7 +27,7 @@ const int DRIVETRAIN_RPM = MOTOR_CARTRIDGE_RPM_BLUE * MOTOR_TEETH / WHEEL_TEETH;
 lemlib::Drivetrain drivetrain(&left_motors, &right_motors, 10.5, lemlib::Omniwheel::NEW_325, DRIVETRAIN_RPM, 2);
 lemlib::OdomSensors sensors(&vertical_tracking_wheel, nullptr, nullptr, nullptr, &imu);
 
-lemlib::ControllerSettings lateral_controller(15, 0, 6, 0, 1, 250, 3, 400, 0);
-lemlib::ControllerSettings angular_controller(8, 0, 16, 0, 1, 150, 3, 350, 0);
+lemlib::ControllerSettings lateral_controller(18, 0, 12, 0, 0, 0, 0, 0, 0);
+lemlib::ControllerSettings angular_controller(8, 0, 35, 0, 0, 0, 0, 0, 0);
 
 lemlib::Chassis chassis(drivetrain, lateral_controller, angular_controller, sensors);

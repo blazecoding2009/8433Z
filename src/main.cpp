@@ -1,9 +1,9 @@
 #include <optional>
 
-#include "autotune.hpp"
+// #include "autotune.hpp"
 #include "lemlib/api.hpp"
 #include "main.h"
-#include "robodash/api.h"
+// #include "robodash/api.h"
 
 #include "auton/autons.hpp"
 #include "hardware.hpp"
@@ -11,55 +11,54 @@
 
 pros::Controller controller(pros::E_CONTROLLER_MASTER);
 
-namespace {
-void printAutotuneResult(const char* label, const autotune::PIDAutotuneResult& result)
-{
-	if (result.success)
-	{
-		pros::lcd::print(0, "%s OK", label);
-		pros::lcd::print(1, "kP %.2f kI %.2f", result.kP, result.kI);
-		pros::lcd::print(2, "kD %.2f Ku %.2f", result.kD, result.Ku);
-		pros::lcd::print(3, "Tu %.2fs Amp %.2f", result.Tu, result.amplitude);
-	}
-	else
-	{
-		pros::lcd::print(0, "%s FAIL", label);
-		pros::lcd::print(1, "%s", result.message.c_str());
-		pros::lcd::print(2, " ");
-		pros::lcd::print(3, " ");
-	}
-}
+// namespace {
+// void printAutotuneResult(const char* label, const autotune::PIDAutotuneResult& result)
+// {
+// 	if (result.success)
+// 	{
+// 		pros::lcd::print(0, "%s OK", label);
+// 		pros::lcd::print(1, "kP %.2f kI %.2f", result.kP, result.kI);
+// 		pros::lcd::print(2, "kD %.2f Ku %.2f", result.kD, result.Ku);
+// 		pros::lcd::print(3, "Tu %.2fs Amp %.2f", result.Tu, result.amplitude);
+// 	}
+// 	else
+// 	{
+// 		pros::lcd::print(0, "%s FAIL", label);
+// 		pros::lcd::print(1, "%s", result.message.c_str());
+// 		pros::lcd::print(2, " ");
+// 		pros::lcd::print(3, " ");
+// 	}
+// }
 
-void runAutotuneRoutine()
-{
-	pros::lcd::clear();
-	pros::lcd::print(0, "Running autotune...");
-	controller.rumble(".");
+// void runAutotuneRoutine()
+// {
+// 	pros::lcd::clear();
+// 	pros::lcd::print(0, "Running autotune...");
+// 	controller.rumble(".");
 
-	auto linearResult = autotune::autotuneLinear();
-	printAutotuneResult("Linear", linearResult);
+// 	auto linearResult = autotune::autotuneLinear();
+// 	printAutotuneResult("Linear", linearResult);
 
-	auto angularResult = autotune::autotuneAngular();
-	printAutotuneResult("Angular", angularResult);
+// 	auto angularResult = autotune::autotuneAngular();
+// 	printAutotuneResult("Angular", angularResult);
 
-	controller.rumble(linearResult.success && angularResult.success ? "-" : ".. ");
-}
-} // namespace
+// 	controller.rumble(linearResult.success && angularResult.success ? "-" : ".. ");
+// }
+// } // namespace
 
 void move_forward_auton()
 {
 	chassis.setPose(0, 0, 0);
 	chassis.moveToPoint(0, 4, 1000, {.maxSpeed = 60});
-	chassis.waitUntilDone();
 }
 
-rd::Selector selector({
-    {"Right Side", &right_side_auton, "", 180},
-    {"move fwd", &move_forward_auton, "", 0},
-    {"Skills", &skills_auton, "", 360},
-});
+// rd::Selector selector({
+//     {"Right Side", &right_side_auton, "", 180},
+//     {"move fwd", &move_forward_auton, "", 0},
+//     {"Skills", &skills_auton, "", 360},
+// });
 
-rd::Console console;
+// rd::Console console;
 
 void initialize() {
 	    // pros::lcd::initialize(); // initialize brain screen
@@ -77,24 +76,26 @@ void initialize() {
     //     }
     // });
 
-	selector.on_select([](std::optional<rd::Selector::routine_t> routine) {
-		if (routine == std::nullopt) {
-			console.printf("No routine selected\n");
-		} else {
-			console.printf("Selected Routine: %s\n", routine.value().name.c_str());
-		}
-	});
+	// selector.on_select([](std::optional<rd::Selector::routine_t> routine) {
+	// 	if (routine == std::nullopt) {
+	// 		console.printf("No routine selected\n");
+	// 	} else {
+	// 		console.printf("Selected Routine: %s\n", routine.value().name.c_str());
+	// 	}
+	// });
 }
 
 void disabled() {
 }
 
-void competition_initialize() { selector.focus(); }
+void competition_initialize() {}
 
 void autonomous() { 
-	//right_side_auton(); 
-	// skills_auton();
-	selector.get_auton();
+	// right_side_auton(); 
+	// selector.get_auton();
+
+	// chassis.setPose(0, 0, 180);
+	// chassis.moveToPoint(0, -3, 1000);	
 }
 
 void opcontrol() {
@@ -142,10 +143,11 @@ void opcontrol() {
 			setMatchLoader(matchLoaderExtended);
 		}
 
-		// if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_B)) {
-		// 	chassis.setPose(0, 0, 180);
-		// 	chassis.moveToPoint(0, -48, 10000);		
-		// 	}
+		if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_B)) {
+			// chassis.setPose(0, 0, 180);
+			// // chassis.turnToHeading(90,10000);
+			// chassis.moveToPoint(0, -10, 10000);		
+			}
 
 		// if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_Y)) {
 		// 	rightside();

@@ -7,13 +7,13 @@
 void right_side_auton() {
 	/* CODEGEN EXPORT: LemLib */
 
-	chassis.setPose(-48.000000, -12.000000, 180.000000);
+	chassis.setPose(-48.000000, -11.000000, 180.000000);
 
-	chassis.moveToPoint(-48.0, -48.0, 2000, {.maxSpeed = 100});
+	chassis.moveToPoint(-48.0, -48.0, 1500, {.maxSpeed = 80});
 	chassis.waitUntil(20.307692);
 	setMatchLoader(true);
-	descore.set_value(false);
-	intake(127, 127);
+	descore.set_value(true);
+	scoreHigh();
 	chassis.waitUntilDone();
 	pros::delay(50);
 	chassis.turnToHeading(268.090848, 1356, {.maxSpeed = 100});
@@ -23,14 +23,14 @@ void right_side_auton() {
 	chassis.moveToPoint(-62, -48.157127, 1043, {.maxSpeed = 127});
 	pros::delay(3000);
 	chassis.turnToHeading(269.718678, 1000, {.maxSpeed = 100});
-	chassis.moveToPoint(-29.0, -50.0, 1793, {.forwards = false, .maxSpeed = 127});
+	chassis.moveToPoint(-26.0, -50.0, 1793, {.forwards = false, .maxSpeed = 127});
 	chassis.waitUntilDone();
-	descore.set_value(true);
+	descore.set_value(false);
 	scoreHigh();
 	pros::delay(3000);
 
 	chassis.moveToPoint(-35.0, -50.0, 750, {.forwards = false, .maxSpeed = 100});
-	descore.set_value(false);
+	descore.set_value(true);
 	chassis.moveToPoint(
 	    -28.0, -50.0, 1500,
 	    {
